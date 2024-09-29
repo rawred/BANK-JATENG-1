@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Bootstrap Sidebar with Logo</title>
+    <title>@yield('title')</title> <!-- Yield for title -->
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
     <style>
         body, html {
             margin: 0;
-            display: flex;
+            display: block;
             background-color: #D9D9D9;
             height: 100%;
             width: 100%;
@@ -118,46 +118,43 @@
             height: auto;  /* Keep aspect ratio */
             width: auto;
             display: block;  /* Ensures the image is treated as a block element */
-            margin-left: 200px;
+            margin-left: 270px;
         }
 
         .sidebar img {
             margin-top : 70px ;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-            .container-logo {
-                margin-left: 0;
-            }
-        }
-        @media (max-width: 576px) {
-            .sidebar {
-                display: none; /* Hide sidebar on smaller screens */
-            }
-            .toggle-btn {
-                display: block; /* Show toggle button on mobile */
-                position: fixed;
-                top: 10px;
-                left: 10px;
-                z-index: 1000;
-                background-color: #343a40;
-                color: white;
-                padding: 10px;
-                border-radius: 5px;
-            }
-            .logo h1 {
-                font-size: 1.5rem; /* Reduce font size for smaller screens */
-            }
-            #logo {
-                max-height: 80px; /* Reduce logo size on mobile */
-            }
-        }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .container-logo {
+        margin-left: 0;
+    }
+    /* Ensure the toggle button is visible on mobile screens */
+    .toggle-btn {
+        display: block; /* Show toggle button on mobile */
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        background-color: #343a40;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Hide the toggle button on larger screens */
+    .toggle-btn {
+        display: none; /* Hide menu button on desktop */
+    }
+}
     </style>
 </head>
 <body>
@@ -179,8 +176,8 @@
         </button>
         <!-- Dropdown Menu -->
         <div class="submenu">
-            <a href="#teller">TELLER</a>
-            <a href="#customer_service">CUSTOMER SERVICE</a>
+            <a href="{{ route('teller') }}">TELLER</a>
+            <a href="{{ route('customer_service') }}">CUSTOMER SERVICE</a>
             <a href="#satpam">SATPAM</a>
         </div>
 

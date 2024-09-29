@@ -7,7 +7,7 @@
     <title>Beranda</title>
 </head>
 <body>
-@extends('layouts.beranda')
+@extends('layouts.beranda')  <!-- Extending from layouts.beranda -->
 
 @section('title', 'Home Page')
 
@@ -15,6 +15,7 @@
     <h2>Welcome to the Home Page</h2>
     <p>This is the content of the home page.</p>
 @endsection
+
 
 </body>
 </html>

@@ -7,9 +7,9 @@
     <title>Beranda</title>
 </head>
 <body>
-@extends('layouts.teller') <!-- Extending the beranda layout -->
+@extends('layouts.teller_forum') <!-- Extending the beranda layout -->
 
-@section('title', 'teller')
+@section('title', 'teller_forum')
 
 @section('content')
     <h2>Welcome to the Home Page</h2>
