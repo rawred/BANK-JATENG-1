@@ -178,7 +178,7 @@
         <div class="submenu">
             <a href="{{ route('teller') }}">TELLER</a>
             <a href="{{ route('customer_service') }}">CUSTOMER SERVICE</a>
-            <a href="#satpam">SATPAM</a>
+            <a href="{{ route('satpam') }}">SATPAM</a>
         </div>
 
 <!-- divider -->
