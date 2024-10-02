@@ -126,6 +126,32 @@
             color: #333;
         }
 
+        /* MENU */
+
+        #menu {
+            max-width: 100%;
+            max-height: 100%;
+            width: 40rem;
+            margin-top: 28px;
+            margin-left: 19.5rem;
+            width: 70rem;
+            height: 10rem;
+            border-radius: 25px;
+        }
+
+        .container-menu {
+            background-color: white ;
+        }
+
+        .menu h2{
+            padding-top: 50px;
+            padding-left: 20px;
+        }
+
+        
+        .menu a {
+            color: black;
+        }
         /* Image styling */
         .logo img {
             max-width: 100%;
@@ -139,6 +165,17 @@
         .sidebar img {
             margin-top: 70px;
         }
+
+        /* .menu img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 30rem;
+            height: 10rem;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            margin-left: 38rem;
+        } */
 
         /* Form styling */
         .form-container {
@@ -160,6 +197,51 @@
             justify-content: center;
             align-items: center;
         }
+
+        .form-select {
+            width: 20rem;
+        }
+
+        #select {
+            align-items: center;
+            justify-content: center;
+            background-color: gray;
+        }
+
+        .all-select {
+            margin-left: 13.7rem;
+        }
+
+        .selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between columns */
+}
+
+.selection .selection-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23rem; /* Adjust width for consistency */
+}
+
+.selection-group h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.form-select {
+    width: 100%; /* Make select fill the width of the parent */
+}
+
+.submit-selection-button {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-right: 34.5rem;
+}
 
         /* Responsive Styles */
         @media (max-width: 768px) {
@@ -234,11 +316,46 @@
             </div>
         </section>
 
-        <section id="button">
-        <a href="{{ route('teller_forum') }}" type="button" class="btn btn-success btn-lg"><svg xmlns="http://www.w3.org/2000/svg" id="plus" width="16" height="16"  fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
-    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0"/>
-    </svg></a>
+<!-- 
+        <section id="menu" class="container-menu">
+            <div class="menu">
+                <img src="{{ asset('images/group3.png') }}" alt="Logo Image">
+            </div>
+        </section> -->
+
+        <br> 
+
+        <section id="menu" class="container-menu">
+            <div class="menu">
+                <a href="{{ route('teller_forum') }}" style="text-decoration: none;"><h2>TEST 1</h2></a>
+            </div>
         </section>
+
+        <section id="menu" class="container-menu">
+            <div class="menu">
+                <a href="{{ route('teller_forum_2') }}" style="text-decoration: none;"><h2>TEST 2</h2></a>
+            </div>
+        </section>
+
+        <section id="menu" class="container-menu">
+            <div class="menu">
+                <a href="{{ route('teller_forum_3') }}" style="text-decoration: none;"><h2>TEST 3</h2></a>
+            </div>
+        </section>
+
+        <section id="menu" class="container-menu">
+            <div class="menu">
+                <a href="{{ route('teller_forum_4') }}" style="text-decoration: none;"><h2>TEST 4</h2></a>
+            </div>
+        </section>
+
+        <section id="menu" class="container-menu">
+            <div class="menu">
+                <a href="{{ route('teller_forum_5') }}" style="text-decoration: none;"><h2>TEST 5</h2></a>
+            </div>
+        </section>
+
+        <br><br><br>
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
