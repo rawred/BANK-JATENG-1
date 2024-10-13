@@ -152,12 +152,22 @@
         table {
             width: 100%;
             margin-top: 20px;
+            
         }
         th, td {
             text-align: center;
             vertical-align: middle;
         }
 
+        thead {
+            background-color: yellow !important; 
+        }
+
+        th {
+            border: none !important;  /* Remove borders from table cells */
+            background-color: yellow !important;
+            height:70px; 
+        }
         .number {
             width: 50px ;
         }
@@ -252,9 +262,9 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col">Numeric (1-10)</th>
-                        <th scope="col">Text</th>
-                        <th scope="col">Switches</th>
+                        <th scope="col"></th>
+                        <th scope="col">TEST</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -268,8 +278,8 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch1_row1" onchange="toggleSwitchLabel(this, 'label_switch1_row1')">
+                                <label class="form-check-label" for="switch1_row1" id="label_switch1_row1">Positif</label>
                             </div>
                         </td>
                     </tr>
@@ -283,8 +293,8 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch2_row2" onchange="toggleSwitchLabel(this, 'label_switch2_row2')">
+                                <label class="form-check-label" for="switch2_row2" id="label_switch2_row2">Positif</label>
                             </div>
                         </td>
                     </tr>
@@ -298,8 +308,8 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch3_row3" onchange="toggleSwitchLabel(this, 'label_switch3_row3')">
+                                <label class="form-check-label" for="switch3_row3" id="label_switch3_row3">Positif</label>
                             </div>
                         </td>
                     </tr>
@@ -313,8 +323,8 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch4_row4" onchange="toggleSwitchLabel(this, 'label_switch4_row4')">
+                                <label class="form-check-label" for="switch4_row4" id="label_switch4_row4">Positif</label>
                             </div>
                         </td>
                     </tr>
@@ -328,8 +338,8 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch5_row5" onchange="toggleSwitchLabel(this, 'label_switch5_row5')">
+                                <label class="form-check-label" for="switch5_row5" id="label_switch5_row5">Positif</label>
                             </div>
                         </td>
                     </tr>
@@ -343,8 +353,8 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch6_row6" onchange="toggleSwitchLabel(this, 'label_switch6_row6')">
+                                <label class="form-check-label" for="switch6_row6" id="label_switch6_row6">Positif</label>
                             </div>
                         </td>
                     </tr>
@@ -358,8 +368,8 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch7_row7" onchange="toggleSwitchLabel(this, 'label_switch7_row7')">
+                                <label class="form-check-label" for="switch7_row7" id="label_switch7_row7">Positif</label>
                             </div>
                         </td>
                     </tr>
@@ -373,12 +383,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch8_row8" onchange="toggleSwitchLabel(this, 'label_switch8_row8')">
+                                <label class="form-check-label" for="switch8_row8" id="label_switch8_row8">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 9 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -388,12 +398,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch9_row9" onchange="toggleSwitchLabel(this, 'label_switch9_row9')">
+                                <label class="form-check-label" for="switch9_row9" id="label_switch9_row9">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 10 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -403,12 +413,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                                <input class="form-check-input" type="checkbox" id="switch10_row10" onchange="toggleSwitchLabel(this, 'label_switch10_row10')">
+                                <label class="form-check-label" for="switch10_row10" id="label_switch10_row10">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 11 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -418,12 +428,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch11_row11" onchange="toggleSwitchLabel(this, 'label_switch11_row11')">
+                            <label class="form-check-label" for="switch11_row11" id="label_switch11_row11">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 12 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -433,12 +443,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch12_row12" onchange="toggleSwitchLabel(this, 'label_switch12_row12')">
+                            <label class="form-check-label" for="switch12_row12" id="label_switch12_row12">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 13 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -448,12 +458,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch13_row13" onchange="toggleSwitchLabel(this, 'label_switch13_row13')">
+                            <label class="form-check-label" for="switch13_row13" id="label_switch13_row13">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 14 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -463,12 +473,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch14_row14" onchange="toggleSwitchLabel(this, 'label_switch14_row14')">
+                            <label class="form-check-label" for="switch14_row14" id="label_switch14_row14">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 15 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -478,12 +488,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch15_row15" onchange="toggleSwitchLabel(this, 'label_switch15_row15')">
+                            <label class="form-check-label" for="switch15_row15" id="label_switch15_row15">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 16 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -493,12 +503,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch16_row16" onchange="toggleSwitchLabel(this, 'label_switch16_row16')">
+                            <label class="form-check-label" for="switch16_row16" id="label_switch16_row16">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 17 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -508,12 +518,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch17_row17" onchange="toggleSwitchLabel(this, 'label_switch17_row17')">
+                            <label class="form-check-label" for="switch17_row17" id="label_switch17_row17">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 18 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -523,12 +533,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch18_row18" onchange="toggleSwitchLabel(this, 'label_switch18_row18')">
+                            <label class="form-check-label" for="switch18_row18" id="label_switch18_row18">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 19 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -538,12 +548,12 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch19_row19" onchange="toggleSwitchLabel(this, 'label_switch19_row19')">
+                            <label class="form-check-label" for="switch19_row19" id="label_switch19_row19">Positif</label>
                             </div>
                         </td>
                     </tr>
-                    <!-- Row 8 -->
+                    <!-- Row 20 -->
                     <tr>
                         <td class="number">
                             <span>1</span> <!-- Static text instead of input -->
@@ -553,8 +563,8 @@
                         </td>
                         <td class="centang">
                             <div class="form-check form-switch d-inline-block me-3">
-                                <input class="form-check-input" type="checkbox" id="switch1_row1">
-                                <label class="form-check-label" for="switch1_row1">Switch 1</label>
+                            <input class="form-check-input" type="checkbox" id="switch20_row20" onchange="toggleSwitchLabel(this, 'label_switch20_row20')">
+                            <label class="form-check-label" for="switch20_row20" id="label_switch20_row20">Positif</label>  
                             </div>
                         </td>
                     </tr>
@@ -580,23 +590,32 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <!-- Custom JS to toggle dropdown -->
-        <script>
-            function toggleSidebar() {
-                const sidebar = document.querySelector('.sidebar');
-                sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
-            }
+<!-- Custom JS to toggle switch label -->
+<script>
+    function toggleSwitchLabel(checkbox, labelId) {
+        const label = document.getElementById(labelId);
+        if (checkbox.checked) {
+            label.textContent = 'Negative';
+        } else {
+            label.textContent = 'Positif';
+        }
+    }
 
-            document.querySelector('.dropdown-btn').addEventListener('click', function() {
-                const submenu = this.nextElementSibling;
-                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-            });
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+    }
 
-            document.querySelector('.dropdown-btn-1').addEventListener('click', function() {
-                const submenu = this.nextElementSibling;
-                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-            });
-        </script>
+    document.querySelector('.dropdown-btn').addEventListener('click', function() {
+        const submenu = this.nextElementSibling;
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.querySelector('.dropdown-btn-1').addEventListener('click', function() {
+        const submenu = this.nextElementSibling;
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+</script>
     </body>
 
     </html>
