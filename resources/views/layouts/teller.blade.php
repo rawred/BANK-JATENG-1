@@ -327,7 +327,7 @@
 
         <section id="menu" class="container-menu">
             <div class="menu">
-                <a href="{{ route('teller_forum') }}" style="text-decoration: none;"><h2>TEST 1</h2></a>
+                <a href="{{ route('teller_forum') }}" style="text-decoration: none;"><h2>TRANSFER DEBET REKENING</h2></a>
             </div>
         </section>
 
